@@ -1,0 +1,34 @@
+# ---------- ENV ----------
+.env
+.env.local
+.env.*.local
+
+# ---------- PYTHON ----------
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# ---------- NODE ----------
+node_modules/
+dist/
+build/
+frontend/node_modules/
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+
+# ---------- IDE ----------
+.vscode/
+.idea/
+
+# ---------- FLASK INSTANCE / DB ----------
+instance/
+
+# ---------- USER UPLOADS ----------
+backend/static/profile_pics/
+backend/static/uploads/
