@@ -7,7 +7,7 @@ from werkzeug.security import check_password_hash
 from database.db import db
 from models.user import User
 
-auth_bp = Blueprint("auth", __name__, url_prefix="/api/auth")
+auth_bp = Blueprint("auth", __name__, url_prefix="/auth")
 
 @auth_bp.route("/register", methods=["POST", "OPTIONS"])
 def register():
