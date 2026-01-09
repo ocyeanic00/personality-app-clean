@@ -1,7 +1,5 @@
 # ---------- ENV ----------
 backend/.env
-frontend/.env
-*.env
 
 
 # ---------- PYTHON ----------
