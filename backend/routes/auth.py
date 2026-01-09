@@ -9,7 +9,7 @@ from models.user import User
 
 auth_bp = Blueprint("auth", __name__, url_prefix="/auth")
 
-@auth_bp.route("/register", methods=["POST", "OPTIONS"])
+@auth_bp.route("/register", methods=["POST"])
 def register():
     if request.method == "OPTIONS":
         return "", 200
@@ -65,7 +65,7 @@ def register():
 # =========================
 # LOGIN  ✅ THIS WAS MISSING
 # =========================
-@auth_bp.route("/login", methods=["POST", "OPTIONS"])
+@auth_bp.route("/login", methods=["POST"])
 def login():
     if request.method == "OPTIONS":
         return "", 200
