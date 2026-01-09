@@ -25,7 +25,7 @@ def get_career(ptype):
 # ---------------------------------------------------------
 # 2️⃣ Save quiz result for GUEST user (no login required)
 # ---------------------------------------------------------
-@career_bp.route("/quiz/submit", methods=["POST", "OPTIONS"])
+@career_bp.route("/quiz/submit", methods=["POST"])
 def submit_quiz_guest():
     if request.method == "OPTIONS":
         return "", 200
@@ -59,7 +59,7 @@ def submit_quiz_guest():
 # ---------------------------------------------------------
 # 3️⃣ Merge guest quiz results into USER account (after login)
 # ---------------------------------------------------------
-@career_bp.route("/quiz/merge-results", methods=["POST", "OPTIONS"])
+@career_bp.route("/quiz/merge-results", methods=["POST"])
 @jwt_required(optional=True)
 def merge_guest_results():
     if request.method == "OPTIONS":

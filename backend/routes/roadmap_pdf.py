@@ -48,7 +48,7 @@ def build_pdf(roadmap):
     return buffer
 
 
-@roadmap_pdf_bp.route("/roadmap/pdf", methods=["POST", "OPTIONS"])
+@roadmap_pdf_bp.route("/roadmap/pdf", methods=["POST"])
 @cross_origin()
 def roadmap_pdf():
     if request.method == "OPTIONS":

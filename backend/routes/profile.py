@@ -16,7 +16,7 @@ ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg"}
 def allowed_file(filename: str) -> bool:
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
 
-@profile_bp.route("/upload-photo", methods=["POST", "OPTIONS"])
+@profile_bp.route("/upload-photo", methods=["POST"])
 def upload_photo():
     if request.method == "OPTIONS":
         return "", 200

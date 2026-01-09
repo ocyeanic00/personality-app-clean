@@ -153,7 +153,7 @@ def build_type(results: Dict[str, AxisResult]) -> str:
     return "".join(results[axis]["letter"] for axis in AXES)
 
 
-@analyze_bp.route("/analyze", methods=["POST", "OPTIONS"])
+@analyze_bp.route("/analyze", methods=["POST"])
 def analyze():
     """
     POST /api/analyze
